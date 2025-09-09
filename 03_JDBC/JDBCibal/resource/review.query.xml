@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment>SQL Queries</comment>
+
+    <entry key="selectMovieList">
+		SELECT 
+		TITLE,
+		GENRE
+		FROM MOVIE
+	</entry>
+
+	<entry key="insertReview">
+		INSERT INTO REVIEW 
+		VALUES (SEQ_REVIEWNO.NEXTVAL,
+		?,
+		?,
+		?,
+		?,
+		SYSDATE)
+	</entry>
+
+	<entry key="selectReviewList">
+		SELECT 
+		REVIEW_NO,
+		REVIEW_ID,
+		MOVIE_TITLE,
+		RATING,
+		CREATE_DATE
+		FROM REVIEW
+	</entry>
+
+	<entry key="updateReview">
+		UPDATE REVIEW 
+		SET RATING=? 
+		WHERE REVIEW_ID=? 
+		AND REVIEW_PWD=?
+	</entry>
+
+	<entry key="deleteReview">
+		DELETE FROM REVIEW 
+		WHERE REVIEW_ID=? 
+		AND REVIEW_PWD=?
+	</entry>
+</properties>

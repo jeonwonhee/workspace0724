@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .area{
+            border: 1px solid black;
+            background-color: rgb(240, 241, 154);
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h2>문제1. 색상 선택 후 변경 버튼을 클릭하면 색상이 변경되도록 만들어라.</h2>
+    <div class="area" id="area"></div>
+    <input type="color" id="picker">
+    <button onclick="changeColor()">변경</button>
+
+    <script>
+        function changeColor(){
+            const inputColor = document.getElementById('picker');       
+            const area = document.getElementById('area'); 
+            area.style.background = inputColor.value;
+        }
+    </script>
+
+    <h2> 문제2. 버튼에 따른 크기조절이 가능하게 만들어라.</h2>
+   <!--
+    <div class="area" id="area2"></div>
+    <input type="color" id="picker2">
+
+   <button onclick="setSize(50,50)">50x50</button>
+   <button onclick="setSize(100,100)">100x100</button>
+   <button onclick="setSize(200,200)">200x200</button>
+
+   <script>
+   function setSize(w, h){
+        let box = document.getElementById("area2");
+        box.style.width = w + "px";
+        box.style.height = h + "px";
+    }
+        -->
+    <div class="area" id="area2"></div>
+<input type="button" value="50x50" onclick="changeSize(50,50);">
+<input type="button" value="100x100" onclick="changeSize(100,100);">
+<input type="button" value="200x200" onclick="changeSize(200,200);">
+
+<script>
+    function changeSize(w, h){
+    const box = document.querySelector("#area2");
+    box.style.width = w + "px";
+    box.style.height = h + "px";
+}
+</script>
+</body>
+</html>

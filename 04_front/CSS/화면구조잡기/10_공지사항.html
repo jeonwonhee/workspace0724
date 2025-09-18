@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>공지사항 표</title>
+  <style>
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e8e1c8; /* 연한 베이지색 배경 */
+  color: #333;
+  padding: 40px 20px;
+      text-align: center;
+}
+
+.header {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  font-size: 12px;
+}
+
+.top-nav .right a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+
+.header.logo {
+  font-size: 28px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 15px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.main-nav a:hover {
+  color: #888;
+}
+    h2 {
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    p.description {
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    table {
+      width: 90%;
+      max-width: 900px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #ddd;
+      font-size: 14px;
+      font-weight: 500; /* 전체 글자 진하기 통일 */
+    }
+
+    thead tr {
+      border-bottom: 1px solid #333;
+    }
+
+    thead th {
+      padding: 12px 0;
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: #333;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid #eee;
+    }
+
+    tbody tr:hover {
+      background-color: #f9f9f9;
+    }
+
+    tbody td {
+      padding: 15px 10px;
+      text-align: center;
+      color: #555;
+    }
+
+    tbody td.subject {
+      text-align: left;
+      padding-left: 15px;
+      color: #333;
+    }
+
+    tbody td.writer {
+      font-size: 13px;
+      color: #666;
+    }
+
+    tbody td.date {
+      font-size: 12px;
+      color: #999;
+      white-space: nowrap;
+    }
+
+    tbody td.view {
+      color: #999;
+    }
+
+    tbody td.notice-label {
+      color: #999;
+      font-size: 13px;
+    }
+
+    /* 공지 NOTICE 강조 */
+    tbody tr.notice-row td.subject {
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+    <header class="header">
+    <div class="top-nav">
+      <div class="left">
+        <a href="http://192.168.10.48:5500/CSS/%ED%99%94%EB%A9%B4%EA%B5%AC%EC%A1%B0%EC%9E%A1%EA%B8%B0/10_%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0.html">COMMUNITY</a>
+    </div>
+      
+      <div class="right">
+        <a href="http://192.168.10.48:5500/CSS/%ED%99%94%EB%A9%B4%EA%B5%AC%EC%A1%B0%EC%9E%A1%EA%B8%B0/09_%EB%A1%9C%EA%B7%B8%EC%9D%B8%EC%B0%BD.html">LOGIN</a>
+        <a href="#">JOIN</a>
+        <a href="#">MY PAGE</a>
+      </div>
+    </div>
+    <h1 class="logo">Light Beige</h1>
+    <nav class="main-nav">
+      <a href="#">당일발송</a>
+      <a href="#">NEW</a>
+      <a href="#">ONLY LB</a>
+      <a href="#">BEST</a>
+      <a href="#">OUTER</a>
+      <a href="#">TOP</a>
+      <a href="#">BOTTOM</a>
+      <a href="#">DRESS&SET</a>
+      <a href="#">SHOES</a>
+      <a href="#">ACC</a>
+    </nav>
+  </header>
+  <h2>NOTICE</h2>
+  <p class="description">공지사항입니다.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>NO</th>
+        <th>SUBJECT</th>
+        <th>WRITER</th>
+        <th>DATE</th>
+        <th>VIEW</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="notice-row">
+        <td class="notice-label">공지</td>
+        <td class="subject">NOTICE</td>
+        <td class="writer">Light Beige</td>
+        <td class="date">2023-09-15 21:50</td>
+        <td class="view">5741</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td class="subject">리뷰 적립금 지급안내</td>
+        <td class="writer">Light Beige</td>
+        <td class="date">2024-01-21 18:56</td>
+        <td class="view">439</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td class="subject">배송지연/일정안내</td>
+        <td class="writer">Light Beige</td>
+        <td class="date">2025-05-26 09:17</td>
+        <td class="view">1765</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
